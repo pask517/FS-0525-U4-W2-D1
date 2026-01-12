@@ -21,7 +21,7 @@ public class Main {
                     scanner.close();
                     break;
                 }
-                System.out.println("Inserisci in quale posizione vuoi inserirlo");
+                System.out.println("Inserisci in quale posizione vuoi inserirlo (da 0 a 4)");
                 int index = Integer.parseInt(scanner.nextLine());
                 array[index] = value;
                 System.out.println("Array aggiornato: " + Arrays.toString(array));
