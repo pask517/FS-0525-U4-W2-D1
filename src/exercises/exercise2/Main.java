@@ -28,10 +28,17 @@ public class Main {
                 System.out.println("Inserisci i litri di carburante consumati");
                 double l = Double.parseDouble(scanner.nextLine());
                 double kmAlLitro = km / l;
-                System.out.println("Km percorsi con un litro di carburante: " + kmAlLitro);
+                if (Double.isInfinite(kmAlLitro)) {
+                    throw new ArithmeticException();
+                } else {
+                    System.out.println("Km percorsi con un litro di carburante: " + kmAlLitro);
+                }
             } catch (NumberFormatException e) {
                 System.out.println("Valore inserito diverso da double, quindi non valido");
+            } catch (ArithmeticException e) {
+                System.out.println("Rapporto con risultato infinito non valido");
             }
         }
     }
 }
+

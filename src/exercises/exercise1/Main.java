@@ -6,12 +6,11 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Array di partenza");
         int[] array = new int[5];
         for (int i = 0; i < array.length; i++) {
             array[i] = (int) Math.ceil(Math.random() * 10);
         }
-        System.out.println(Arrays.toString(array));
+        System.out.println("Array di partenza: " + Arrays.toString(array));
         while (true) {
             try {
                 System.out.println("Inserisci un numero da 1 a 10 o 0 per terminare");
