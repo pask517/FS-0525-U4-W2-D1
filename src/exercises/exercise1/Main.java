@@ -27,7 +27,7 @@ public class Main {
                 System.out.println("Array aggiornato: " + Arrays.toString(array));
 
             } catch (NumberFormatException e) {
-                System.out.println("Inserisci un numero,non una stringa");
+                System.out.println("Valore non valido,diverso da numero intero");
             } catch (ArrayIndexOutOfBoundsException e) {
                 System.out.println("Indice fuori dall'array");
             }
