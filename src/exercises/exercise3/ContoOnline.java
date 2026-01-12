@@ -1,5 +1,7 @@
 package exercises.exercise3;
 
+import exercises.BancaException;
+
 public class ContoOnline extends ContoCorrente {
     private double maxPrelievo;
 
@@ -12,8 +14,10 @@ public class ContoOnline extends ContoCorrente {
         System.out.println("Titolare" + restituisciTitolare() + "-Saldo: " + restituisciSaldo() + "-Num movimenti: " + restituisciNMovimenti());
     }
 
-    public void preleva(double x) {
-        if (x <= maxPrelievo) {
+    public void preleva(double x) throws BancaException {
+        if (x > maxPrelievo) {
+            throw new BancaException("Il prelievo non é disponibile");
+        } else {
             super.preleva(x);
         }
 
